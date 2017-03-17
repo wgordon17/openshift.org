@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Minishift - Containerized OpenShift Cluster</title>
+  <meta name="description" content="The next generation open source app hosting platform by Red Hat">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="9jyGvNki3NSELTYJ7t_XbF-YQZ8jjfm7LqQQGNq4SSg">
+  <link class="skin_color" href="#" media="screen" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet" type="text/css" media="screen, print" />
+  <link href="/css/theme-responsive.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="/css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" media="screen" />
+  <link rel="apple-touch-icon-precomposed" href="/img/icons/apple-touch-icon.png" type="image/png" />
+  <link href="/img/icons/favicon.png" rel="icon" type="image/png" />
+  <!--[if IE]>
+    <link href="/css/ie/ie.css" rel="stylesheet" type="text/css" media="screen" />
+  <![endif]-->
+  <!--[if lte IE 8]>
+    <script src="/js/responsive/html5shiv.js" type="text/javascript"></script>
+    <script src="/js/responsive/respond.js" type="text/javascript"></script>
+  <![endif]-->
+  <!-- Google Analytics -->
+<script async src="//www.google-analytics.com/analytics.js" type="text/javascript"></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-40375612-1', 'openshift.org');
+  ga('set', 'forceSSL', true);
+  ga('send', 'pageview');
+  
+  var trackOutboundLink = function(url) {
+     ga('send', 'event', 'outbound', 'click', url, {
+       'transport': 'beacon',
+       'hitCallback': function(){document.location = url;}
+     });
+  }
+</script>
+</head>
+  <body>
+    <div class="layout-wide" id="layout">
+      <header class="index_static">
+        <div class="nav_logo animated fadeIn">
+  <div class="container">
+    <div class="row">
+      <nav class="col-md-12">
+        <ul class="sf-menu" id="menu">
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#getting-started">GET STARTED</a>
+          </li>
+          <li>
+            <a href="#resources">RESOURCES</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+        <section class="content_info">
+          <div class="bg_parallax image_03_parallax"></div>
+          <section class="opacy_bg_02 paddings">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="logo wow fadeIn delay">
+                    <a href="/index.html" title="Back to Home">
+                      <img alt="OpenShift Origin logo" class="logo_img" src="/img/origin_logo.svg" />
+                    </a>
+                  </div>
+                  <h1 class="animated fadeInDown delay">
+  Minishift
+</h1>
+<p class="animated fadeInUp delay">Develop Applications Locally in a Containerized OpenShift Cluster</p>
+
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </header>
+      
+      <!-- main content -->
+      
+
+<section class="container" id="about">
+  <div class="info_title info_vertical">
+    <div class="row wow info_vertical animated fadeInDown">
+      <div class="col-md-12 text-left">
+        <p>
+          Minishift is a tool that helps you run OpenShift locally by launching a single-node
+          OpenShift cluster inside a virtual machine. With Minishift you can try out OpenShift or
+          develop with it, day-to-day, on your local machine.
+        </p>
+        <p>
+          You can run Minishift on Windows, Mac OS, and GNU/Linux operating systems. Minishift
+          uses <a href="https://github.com/docker/machine/tree/master/libmachine">libmachine</a>
+          for provisioning virtual machines, and <a href="https://github.com/openshift/origin">OpenShift Origin</a>
+          for running the cluster.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="getting-started">
+    <div class="vertical_line">
+      <div class="circle_bottom"></div>
+    </div>
+    <div class="row wow info_vertical animated fadeInUp">
+      <h1>Get Started</h1>
+        <div class="col-md-12 text-left">
+          <p>
+          Minishift requires a hypervisor to run the virtual machine containing OpenShift. Depending on your
+          host operating system, you have the choice of the following hypervisors:
+          </p>
+        <p>
+          <ul>
+          <li>OS X: <a href="https://github.com/mist64/xhyve">xhyve</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>, <a href="https://www.vmware.com/products/fusion">VMWare Fusion</a>
+          </li>
+          <li>GNU/Linux: <a href="https://github.com/minishift/minishift/blob/master/docs/docker-machine-drivers.md">KVM</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+            <!--TODO: After docs are published, change KVM link to doc page link-->
+          </li>
+          <li>Windows: <a href="https://technet.microsoft.com/en-us/library/mt169373.aspx">Hyper-V</a> (default), <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a>
+          </li>
+        </ul>
+        </p>
+        <p>
+          To download the latest <span>Minishift</span> release and view release notes, visit the
+          Minishift <a href="https://github.com/minishift/minishift/releases">releases page</a>.
+        </p>
+        <p>
+          For detailed installation instructions, see the <a href="https://github.com/minishift/minishift/blob/master/README.md#installation">installation document</a>.
+          <!--TODO: When docs are published, changed README link to install page link-->
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container info_title" id="resources">
+  <div class="vertical_line">
+    <div class="circle_bottom"></div>
+  </div>
+  <i class="fa fa-check-circle-o right"></i>
+  <div class="row wow info_vertical animated fadeInUp">
+    <h1>Resources</h1>
+  </div>
+  <div class="padding_bottom">
+    <div class="container wow fadeInUp">
+      <div class="row text-center">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Download</h2>
+          <p>
+            Get the latest Minishift binaries and view release notes on the Minishift <a href="https://github.com/minishift/minishift/releases">releases page</a>.
+            <!--TODO: Change to doc library link-->
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Documentation</h2>
+          <p>
+            Want to learn how to use, troubleshoot, and develop Minishift? Check out the available <a href="https://github.com/minishift/minishift/blob/master/README.md#documentation">documentation</a>.
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <h2>Community</h2>
+          <p>
+            Minishift is an open-source project forked from <a href="https://github.com/kubernetes/minikube">Minikube</a>, and we welcome <a href="https://github.com/minishift/minishift#community">contributions</a>!
+            Get in touch with Minishift developers at the #minishift channel on IRC (freenode).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- end main content -->
+      
+      <!-- footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <!-- Social Section -->
+      <div class="col-md-4 col-sm-12">
+        <a href="https://www.redhat.com/">
+          <img alt="Red Hat" src="https://assets.openshift.net/app/assets/redhat.svg">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-12 text-center">
+        <a href="https://hub.openshift.com/quickstarts/92-do-it-yourself-0-1" title="Powered by OpenShift Online with the DIY Cartridge">
+          <img alt="Powered by OpenShift Online" src="https://www.openshift.com/sites/default/files/images/powered-transparent-white.png">
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <ul class="social">
+          <li class="twitter">
+            <a href="https://twitter.com/openshift">
+              <span>
+                <i class="fa fa-twitter-square"></i>
+              </span>
+            </a>
+          </li>
+          <li class="github">
+            <a href="https://github.com/openshift/origin">
+              <span>
+                <i class="fa fa-github"></i>
+              </span>
+            </a>
+          </li>
+          <li class="google">
+            <a href="https://plus.google.com/communities/114361859072744017486">
+              <span>
+                <i class="fa fa-google-plus-square"></i>
+              </span>
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://www.facebook.com/openshift">
+              <span>
+                <i class="fa fa-facebook-square"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- End footer -->
+    </div>
+
+    <script src="/js/jquery.js" type="text/javascript"></script>
+    <script src="/js/nav/tinynav.js" type="text/javascript"></script>
+    <script src="/js/nav/superfish.js" type="text/javascript"></script>
+    <script src="/js/nav/hoverIntent.js" type="text/javascript"></script>
+    <script src="/js/totop/jquery.ui.totop.js" type="text/javascript"></script>
+    <script src="/js/rs-plugin/js/jquery.themepunch.tools.min.js" type="text/javascript"></script>
+    <script src="/js/rs-plugin/js/jquery.themepunch.revolution.min.js" type="text/javascript"></script>
+    <script src="/js/carousel/owl.carousel.js" type="text/javascript"></script>
+    <script src="/js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <script src="/js/gallery/modernizr.custom.26633.js" type="text/javascript"></script>
+    <script src="/js/gallery/jquery.gridrotator.js" type="text/javascript"></script>
+    <script src="/js/team/modernizr.custom.63321.js" type="text/javascript"></script>
+    <script src="/js/team/jquery.catslider.js" type="text/javascript"></script>
+    <script src="/js/filters/jquery.isotope.js" type="text/javascript"></script>
+    <script src="/js/theme-options/theme-options.js" type="text/javascript"></script>
+    <script src="/js/theme-options/jquery.cookies.js" type="text/javascript"></script>
+    <script src="/js/twitter/jquery.tweet.js" type="text/javascript"></script>
+    <script src="/js/animations/wow.min.js" type="text/javascript"></script>
+    <script src="/js/parallax/jquery.inview.js" type="text/javascript"></script>
+    <script src="/js/parallax/nbw-parallax.js" type="text/javascript"></script>
+    <script src="/js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+    
+    
+    <!-- Google Remarekting -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1007064360;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1007064360/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+    <!-- Track tagged outbound Links -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.analytics').click(function(e){
+        e.preventDefault();
+        trackOutboundLink($(this).attr('href'));
+      });
+    });
+    </script>
+    <!-- Place this tag right after the last button or just before your close body tag. -->
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
