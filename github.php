@@ -1,6 +1,6 @@
  <?php
 
-// Check for local file existence, set ETag value to true if file doesn't exist
+// Check for local file existence, set Last-Modified value to false if file doesn't exist
 // to force curl of API
 if ($github_file = file_get_contents('github_api_output.json')) {
     $github_json = json_decode($github_file, true);
@@ -12,8 +12,8 @@ if ($github_file = file_get_contents('github_api_output.json')) {
 // See https://developer.github.com/v3/#increasing-the-unauthenticated-rate-limit-for-oauth-applications for details
 $curl = curl_init();
 $url = 'https://api.github.com/repos/openshift/origin/releases/latest';
-$data = ['client_id' => '7e65d957b9bb631e53e6',
-         'client_secret' => '6ce97999e104ed75fded7328485a5f0e36357a46'];
+$data = ['client_id' => getenv('OPENSHIFT_GITHUB_ID'),
+         'client_secret' => getenv('OPENSHIFT_GITHUB_SECRET')];
 $url = sprintf("%s?%s", $url, http_build_query($data));
 
 curl_setopt($curl, CURLOPT_URL, $url);
